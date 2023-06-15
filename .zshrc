@@ -95,6 +95,9 @@ unsetopt PROMPT_SP
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
