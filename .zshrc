@@ -92,6 +92,11 @@ setopt HIST_REDUCE_BLANKS
 
 unsetopt PROMPT_SP
 
+autoload -U bashcompinit
+bashcompinit
+
+eval "$(register-python-argcomplete pipx)"
+
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
@@ -121,3 +126,6 @@ alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Created by `pipx` on 2023-06-16 22:51:05
+export PATH="$PATH:/home/klepoz/.local/bin"
