@@ -80,7 +80,7 @@ ZSH_THEME="spaceship"
 #
 # INCOMPATIBLE with Pure prompt: vi-mode, virtualenv
 plugins=(git zsh-syntax-highlighting)
-eval "$(navi widget zsh)"
+# eval "$(navi widget zsh)"
 
 source $ZSH/oh-my-zsh.sh
 
