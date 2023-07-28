@@ -1,2 +1,7 @@
 # .dotfiles
-Collection of my configurational files
+Collection of my configuration files
+
+Includes configs for:
+* Neovim
+* RipGrep
+* Zsh
