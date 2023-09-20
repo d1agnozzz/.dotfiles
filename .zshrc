@@ -79,7 +79,7 @@ ZSH_THEME="spaceship"
 # Add wisely, as too many plugins slow down shell startup.
 #
 # INCOMPATIBLE with Pure prompt: vi-mode, virtualenv
-plugins=(git zsh-syntax-highlighting)
+plugins=(zsh-syntax-highlighting gitfast)
 # eval "$(navi widget zsh)"
 
 source $ZSH/oh-my-zsh.sh
@@ -129,3 +129,5 @@ alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Created by `pipx` on 2023-06-16 22:51:05
 export PATH="$PATH:$HOME/.local/bin"
+
+export QSYS_ROOTDIR="/home/alex-mit-bvt2002/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"
