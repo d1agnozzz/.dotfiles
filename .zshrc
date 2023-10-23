@@ -99,8 +99,11 @@ eval "$(register-python-argcomplete pipx)"
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey '^H' backward-kill-word # Ctrl-Backspace to delete word
 
 alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias ntfsfix='sudo ntfsfix -bd /dev/sda1'
+alias update='paru ; flatpak update'
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -131,3 +134,4 @@ alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export PATH="$PATH:$HOME/.local/bin"
 
 export QSYS_ROOTDIR="/home/alex-mit-bvt2002/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"
+

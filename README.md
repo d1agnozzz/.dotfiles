@@ -5,3 +5,4 @@ Includes configs for:
 * Neovim
 * RipGrep
 * Zsh
+* BlackBox terminal themes (basically cloned Tilix themes)
