@@ -105,6 +105,10 @@ alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ntfsfix='sudo ntfsfix -bd /dev/sda1'
 alias update='paru ; flatpak update'
 
+function crop_transparent {
+    convert $1 -fuzz 50% -trim +repage $1
+}
+
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
