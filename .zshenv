@@ -13,3 +13,5 @@ export RCLONE_PROGRESS=true
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export MOZ_ENABLE_WAYLAND=1
 fi
+
+export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda
