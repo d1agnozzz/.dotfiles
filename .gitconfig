@@ -1,0 +1,34 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+
+[core]
+    pager = delta
+	editor = nvim
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+[user]
+	email = klepoz.672@mail.ru
+	name = Alex Mit
+[commit]
+	gpgSign = false
+[push]
+	gpgsign = false
+[alias]
+	hist = log --all --decorate --oneline --graph
+[init]
+	defaultBranch = main
