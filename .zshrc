@@ -135,7 +135,7 @@ function crop_transparent {
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Created by `pipx` on 2023-06-16 22:51:05
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.cargo/bin"
 
 export QSYS_ROOTDIR="/home/alex-mit-bvt2002/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"
 
