@@ -3,7 +3,10 @@
 #
 
 path+=('/usr/local/texlive/2023/bin/x86_64-linux')
+path+=("$HOME/.cargo/bin")
+path+="$HOME/.local/bin"
 export path
+
 export MANPATH="$(manpath -g):/usr/local/texlive/2023/texmf-dist/doc/man"
 export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
 
