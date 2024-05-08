@@ -109,6 +109,12 @@ function crop_transparent {
     convert $1 -fuzz 50% -trim +repage $1
 }
 
+function pyenv_activate {
+    export PYENV_ROOT="$HOME/.pyenv"
+    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH" 
+    eval "$(pyenv init -)"
+}
+
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -138,4 +144,24 @@ function crop_transparent {
 # export PATH="$PATH:$HOME/.local/bin:$HOME/.cargo/bin"
 
 export QSYS_ROOTDIR="/home/alex-mit-bvt2002/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/klepolin/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/klepolin/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/klepolin/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/klepolin/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/home/klepolin/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/home/klepolin/miniforge3/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
 
