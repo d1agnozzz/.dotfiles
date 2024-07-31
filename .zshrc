@@ -103,17 +103,17 @@ bindkey '^H' backward-kill-word # Ctrl-Backspace to delete word
 
 alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ntfsfix='sudo ntfsfix -bd /dev/sda1'
-alias update='paru ; flatpak update'
+alias update='paru ; flatpak update ; ~/is_reboot_needed.sh'
 
 function crop_transparent {
     convert $1 -fuzz 50% -trim +repage $1
 }
 
-function pyenv_activate {
-    export PYENV_ROOT="$HOME/.pyenv"
-    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH" 
-    eval "$(pyenv init -)"
-}
+# function pyenv_activate {
+#     export PYENV_ROOT="$HOME/.pyenv"
+#     [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH" 
+#     eval "$(pyenv init -)"
+# }
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -144,24 +144,22 @@ function pyenv_activate {
 # export PATH="$PATH:$HOME/.local/bin:$HOME/.cargo/bin"
 
 export QSYS_ROOTDIR="/home/alex-mit-bvt2002/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"
+#
+export CONDA_AUTO_ACTIVATE_BASE=false
 
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/klepolin/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/klepolin/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/klepolin/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/klepolin/miniforge3/etc/profile.d/conda.sh"
+    if [ -f "/home/klepolin/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/home/klepolin/mambaforge/etc/profile.d/conda.sh"
     else
-        export PATH="/home/klepolin/miniforge3/bin:$PATH"
+        export PATH="/home/klepolin/mambaforge/bin:$PATH"
     fi
 fi
 unset __conda_setup
-
-if [ -f "/home/klepolin/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/home/klepolin/miniforge3/etc/profile.d/mamba.sh"
-fi
 # <<< conda initialize <<<
 
