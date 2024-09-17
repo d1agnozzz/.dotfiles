@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Checking if reboot is required..."
+
 get_boot_kernel() {
     local get_version=0
     for field in $(file /boot/vmlinuz*); do
