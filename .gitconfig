@@ -1,13 +1,14 @@
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
+	helper =
 	helper = !/usr/bin/gh auth git-credential
 
 [core]
     pager = delta
 	editor = nvim
+	autocrlf = input
 
 [interactive]
     diffFilter = delta --color-only
@@ -30,6 +31,6 @@
 [push]
 	gpgsign = false
 [alias]
-	hist = log --all --decorate --oneline --graph
+	hist = log --all --decorate --graph
 [init]
 	defaultBranch = main
